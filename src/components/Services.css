@@ -1,0 +1,135 @@
+.card {
+    width: 345px;
+    height: 435px;
+    
+    
+    border-radius: 20px;
+    ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: 0.2s ease-in-out;
+  }
+
+  @media screen and (max-width:800px) {
+    .card {
+      height: 400px;
+      
+      margin-right: 30px;
+    }
+
+    .cards  {
+      margin: 1px;
+      width: 100vh;
+      
+  }}
+
+  .w {
+    background: url('https://images.pexels.com/photos/6018398/pexels-photo-6018398.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+  .p {
+    background: url('https://images.pexels.com/photos/15637510/pexels-photo-15637510/free-photo-of-illuminated-face-of-a-smiling-woman-at-night.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  .e {
+    background: url('https://images.pexels.com/photos/761543/pexels-photo-761543.jpeg?auto=compress&cs=tinysrgb&w=1600');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+  
+
+
+  .img {
+    height: 30%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    z-index: 1;
+  }
+  
+  .textBox {
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    transition: 0.2s ease-in-out;
+    z-index: 2;
+  }
+  
+  .textBox > .text {
+    font-weight: bold;
+  }
+  
+  .textBox > .head {
+    font-size: 30px;
+    
+  }
+  
+  .textBox > .price {
+    font-size: 17px;
+  }
+  
+  .textBox > span {
+    font-size: 22px;
+    color: lightgrey;
+    
+  }
+  
+  .card:hover > .textBox {
+    opacity: 1;
+  }
+  
+  .card:hover > .img {
+    height: 65%;
+    filter: blur(7px);
+    animation: anim 3s infinite;
+  }
+
+  .card:hover {
+    border: 1px solid rgba(255, 255, 255, 0.638);
+  }
+  
+
+
+  @keyframes anim {
+    0% {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .card:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: rgba(209, 209, 209, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  }
+  
+
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    margin: 0 20vh 0 20vh;
+
+    
+}
